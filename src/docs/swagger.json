@@ -1,0 +1,116 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Calculater",
+        "description": "Calculator REST API",
+        "version": "v1"
+    },
+    "schemes": [
+        "https"
+    ],
+    "basePath": "/api",
+    "host": "localhost:8080",
+    "paths": {
+        "/sum": {
+            "get": {
+                "tags": [
+                    "Calculator"
+                ],
+                "summary": "Calculate sum of given numbers.",
+                "produces": "application/json",
+                "parameters": [
+                    {
+                        "name": "numbers",
+                        "in": "query",
+                        "schema": {
+                            "type": "String"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Calculation result",
+                        "schema": {
+                            "$ref": "#/definitions/Result"
+                        }
+                    },
+                    "4XX": {
+                        "description": "Client error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    },
+                    "5XX": {
+                        "description": "Server error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        },
+        "/prime": {
+            "get": {
+                "tags": [
+                    "Calculator"
+                ],
+                "summary": "Check if given number is prime.",
+                "produces": "application/json",
+                "parameters": [
+                    {
+                        "name": "number",
+                        "in": "query",
+                        "schema": {
+                            "type": "String"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Calculation result",
+                        "schema": {
+                            "$ref": "#/definitions/Result"
+                        }
+                    },
+                    "4XX": {
+                        "description": "Client error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    },
+                    "5XX": {
+                        "description": "Server error",
+                        "schema": {
+                            "$ref": "#/definitions/Message"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Message": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "type": "string"
+                }
+            }
+        },
+        "Result": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "number",
+                    "required": false
+                },
+                "isPrime": {
+                    "type": "boolean",
+                    "required": false
+                }
+            }
+        }
+    }
+}
