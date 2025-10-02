@@ -9,7 +9,6 @@ RUN npm run build
 # Stage 2: Production
 FROM node:20-alpine
 WORKDIR /usr/src/app
-
 COPY package*.json ./
 RUN npm ci --omit=dev
 COPY --from=builder /usr/src/app/dist ./dist
