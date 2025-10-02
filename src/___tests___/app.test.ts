@@ -38,7 +38,7 @@ describe(`GET /api/${appVersion}/calculate/sum`, () => {
     const app = createApp();
     const res = await request(app).get(`/api/${appVersion}/calculate/sum`).query({ numbers: "Not a Number" });
     expect(res.status).toBe(400);
-    expect(res.body.message).toEqual("Invalid numbers provided!");
+    expect(res.body.message).toEqual("Invalid numbers provided.");
   });
 
 });
@@ -50,7 +50,7 @@ describe(`GET /api/${appVersion}/calculate/prime`, () => {
     for (let i = 0; i < primeNumbers.length; i++) {
       const res = await request(app).get(`/api/${appVersion}/calculate/prime`).query({ number: primeNumbers[i] });
       expect(res.status).toBe(200);
-      expect(res.body.result).toEqual(true);
+      expect(res.body.prime).toEqual(true);
     }
   });
 
@@ -59,7 +59,7 @@ describe(`GET /api/${appVersion}/calculate/prime`, () => {
     for (let i = 0; i < nonPrimeNumbers.length; i++) {
       const res = await request(app).get(`/api/${appVersion}/calculate/prime`).query({ number: nonPrimeNumbers[i] });
       expect(res.status).toBe(200);
-      expect(res.body.result).toEqual(false);
+      expect(res.body.prime).toEqual(false);
     }
   });
 
