@@ -79,14 +79,134 @@
 					}
 				},
 				"description": "Returns status of the service",
+				"tags": [
+					"Monitoring"
+				],
 				"security": [],
 				"parameters": []
+			}
+		},
+		"/calculate/sum": {
+			"get": {
+				"operationId": "Sum",
+				"responses": {
+					"200": {
+						"description": ": number, \"isPrime\": boolean} JSON-object consisting of calculation results.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"properties": {
+												"isPrime": {
+													"type": "boolean"
+												},
+												"result": {
+													"type": "number",
+													"format": "double"
+												}
+											},
+											"required": [
+												"isPrime",
+												"result"
+											],
+											"type": "object"
+										},
+										{
+											"properties": {
+												"message": {
+													"type": "string"
+												}
+											},
+											"required": [
+												"message"
+											],
+											"type": "object"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"description": "Controller method for calculating sum.",
+				"tags": [
+					"Calculator"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"description": "Comma separated list og numbers.",
+						"in": "query",
+						"name": "numbers",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/calculate/prime": {
+			"get": {
+				"operationId": "IsPrime",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{
+											"properties": {
+												"result": {
+													"type": "boolean"
+												}
+											},
+											"required": [
+												"result"
+											],
+											"type": "object"
+										},
+										{
+											"properties": {
+												"message": {
+													"type": "string"
+												}
+											},
+											"required": [
+												"message"
+											],
+											"type": "object"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"description": "Controller method for checking if number is prime.",
+				"tags": [
+					"Calculator"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "number",
+						"required": true,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
 			}
 		}
 	},
 	"servers": [
 		{
-			"url": "/api/v1"
+			"url": "/api/v0"
 		}
 	]
 }

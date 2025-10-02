@@ -7,6 +7,8 @@ import {  fetchMiddlewares, ExpressTemplateService } from '@tsoa/runtime';
 import { MetricsController } from './../controllers/MetricsController';
 // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
 import { HealthController } from './../controllers/HealthController';
+// WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
+import { CalculatorController } from './../controllers/CalculatorController';
 import type { Request as ExRequest, Response as ExResponse, RequestHandler, Router } from 'express';
 
 
@@ -78,6 +80,66 @@ export function RegisterRoutes(app: Router) {
 
               await templateService.apiHandler({
                 methodName: 'getHealth',
+                controller,
+                response,
+                next,
+                validatedArgs,
+                successStatus: undefined,
+              });
+            } catch (err) {
+                return next(err);
+            }
+        });
+        // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
+        const argsCalculatorController_sum: Record<string, TsoaRoute.ParameterSchema> = {
+                numbers: {"in":"query","name":"numbers","required":true,"dataType":"string"},
+        };
+        app.get('/calculate/sum',
+            ...(fetchMiddlewares<RequestHandler>(CalculatorController)),
+            ...(fetchMiddlewares<RequestHandler>(CalculatorController.prototype.sum)),
+
+            async function CalculatorController_sum(request: ExRequest, response: ExResponse, next: any) {
+
+            // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
+
+            let validatedArgs: any[] = [];
+            try {
+                validatedArgs = templateService.getValidatedArgs({ args: argsCalculatorController_sum, request, response });
+
+                const controller = new CalculatorController();
+
+              await templateService.apiHandler({
+                methodName: 'sum',
+                controller,
+                response,
+                next,
+                validatedArgs,
+                successStatus: undefined,
+              });
+            } catch (err) {
+                return next(err);
+            }
+        });
+        // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
+        const argsCalculatorController_isPrime: Record<string, TsoaRoute.ParameterSchema> = {
+                number: {"in":"query","name":"number","required":true,"dataType":"double"},
+        };
+        app.get('/calculate/prime',
+            ...(fetchMiddlewares<RequestHandler>(CalculatorController)),
+            ...(fetchMiddlewares<RequestHandler>(CalculatorController.prototype.isPrime)),
+
+            async function CalculatorController_isPrime(request: ExRequest, response: ExResponse, next: any) {
+
+            // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
+
+            let validatedArgs: any[] = [];
+            try {
+                validatedArgs = templateService.getValidatedArgs({ args: argsCalculatorController_isPrime, request, response });
+
+                const controller = new CalculatorController();
+
+              await templateService.apiHandler({
+                methodName: 'isPrime',
                 controller,
                 response,
                 next,

@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const appVersion = process.env.APP_VERSION || 'v1';
+const appVersion = process.env.APP_VERSION || 'v0';
 const tsoaPath = path.join(process.cwd(), 'tsoa.json');
 
 const tsoaConfig = JSON.parse(fs.readFileSync(tsoaPath, 'utf-8'));

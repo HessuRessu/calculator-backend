@@ -1,34 +1,20 @@
-# REST Boilerplate
+# Calculator Backend
 
-A modern TypeScript boilerplate for building REST APIs.  
-Includes out-of-the-box setup for **Express**, **TSOA**, **Swagger UI**, **Jest**, **ESLint**, **Docker**, **Compose**, **Typedoc**, and a **logger**.  
+Simple calculator microservice demonstration.
+Calculator can calculate simple equations and check if given number is prime.
 
-  ![Build Status](https://github.com/HessuRessu/rest-boilerplate/actions/workflows/build-test.yml/badge.svg)
-  ![SAST Scan](https://github.com/HessuRessu/rest-boilerplate/actions/workflows/sast-scan.yml/badge.svg)
-  ![Docker publish](https://github.com/HessuRessu/rest-boilerplate/actions/workflows/docker-publish.yml/badge.svg)
+  ![Build Status](https://github.com/HessuRessu/calculator-backend/actions/workflows/build-test.yml/badge.svg)
+  ![SAST Scan](https://github.com/HessuRessu/calculator-backend/actions/workflows/sast-scan.yml/badge.svg)
+  ![Docker publish](https://github.com/HessuRessu/calculator-backend/actions/workflows/docker-publish.yml/badge.svg)
 
-
----
-
-## ✨ Features
-
-- **Express + TSOA** – automatic route generation and OpenAPI/Swagger spec  
-- **Swagger UI** – API documentation available at `/docs/{version}`  
-- **Jest** – testing preconfigured  
-- **ESLint** – modern lint configuration (flat config)  
-- **Docker & Compose** – run easily in containers  
-- **Typedoc** – automatic code documentation  
-- **Logger (Pino)** – JSON-friendly logger ready for monitoring integration  
-- **Versioned API** – basePath controlled via environment variable (`APP_VERSION`)  
-- **Monitoring & Observability with** - Prometheus-compatible metrics
 
 ---
 
 ## 📦 Installation
 
 ``` bash
-git clone https://github.com/HessuRessu/rest-boilerplate.git
-cd rest-boilerplate
+git clone https://github.com/HessuRessu/calculator-backend.git
+cd calculator-backend
 npm install
 ```
 
@@ -42,7 +28,7 @@ This project uses a `.env` file. Example:
 PORT=8080
 NODE_ENV=dev
 LOG_LEVEL=debug
-SERVICE_NAME=service-name
+SERVICE_NAME=calculator-backend
 APP_VERSION=v1
 ```
 
@@ -135,6 +121,8 @@ docker-compose up --build
 ``` text
 .
 ├── src/
+│   ├── ___tests___/      # Unit tests
+│   ├── classes/          # Service classes
 │   ├── controllers/      # TSOA controllers
 │   ├── middleware/       # Middleware handlers
 │   ├── routes/           # Generated routes
@@ -143,7 +131,6 @@ docker-compose up --build
 │   └── index.ts          # Entry point
 ├── scripts/              # Helper scripts (e.g., TSOA basePath)
 ├── swagger/              # Generated swagger specs
-├── tests/                # Tests
 ├── Dockerfile
 ├── docker-compose.yml
 ├── tsoa.json             # TSOA configuration
@@ -207,17 +194,6 @@ scrape_configs:
 - **sast-scan.yml** → Static Application Security Testing (SAST)  
 - **docker-public.yml** → Docker image build and publish to registry  
 - **Dependabot** → Automated dependency updates  
-
----
-
-## 🚧 Roadmap / suggestions
-
-- [ ] Add request validation (e.g. Zod / class-validator)  
-- [ ] Add production-grade security middleware (helmet, rate limiter)  
-- [ ] Add distributed tracing (OpenTelemetry)  
-- [ ] Integrate logging aggregation (ELK / Loki)  
-- [ ] Expand test coverage with integration tests  
-- [ ] Add alerting with Prometheus Alertmanager 
 
 ---
 
