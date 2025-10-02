@@ -1,6 +1,6 @@
 # Calculator Backend
 
-Simple calculator microservice demonstration.
+Simple calculator microservice demonstration.  
 Calculator can calculate simple equations and check if given number is prime.
 
 See ![Source documentation](https://github.com/HessuRessu/calculator-backend/blob/main/docs/modules.md).
