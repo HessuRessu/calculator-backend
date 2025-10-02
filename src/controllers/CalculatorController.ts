@@ -16,8 +16,9 @@ export class CalculatorController extends Controller {
 
     /**
     * Controller method for calculating sum.
-    * @param numbers Comma separated list og numbers.
+    * @param numbers Comma separated list of numbers.
     * @returns {"result": number, "isPrime": boolean} JSON-object consisting of calculation results.
+    * @returns {"message": string} JSON-object indicating calculation error.
     */
     @Get("/sum")
     public async sum(
@@ -37,9 +38,9 @@ export class CalculatorController extends Controller {
 
     /**
     * Controller method for checking if number is prime.
-    * 
-    * @param {Request} request express http request.
-    * @param {Response} response express http response.
+    * @param number Number that we will be checking
+    * @returns {"result": boolean} JSON-object indicating if input was prime.
+    * @returns {"message": string} JSON-object indicating calculation error.
     */
     @Get("/prime")
     public async isPrime(

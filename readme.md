@@ -3,10 +3,14 @@
 Simple calculator microservice demonstration.
 Calculator can calculate simple equations and check if given number is prime.
 
+As said, this is a demonstration service, which requirements are following:
+* Application must be able to sum up 1-n numbers and indicate if sum is prime
+* Application must be able to indicate if given number is prime
+* Application must have separate frontend and backend components
+
   ![Build Status](https://github.com/HessuRessu/calculator-backend/actions/workflows/build-test.yml/badge.svg)
   ![SAST Scan](https://github.com/HessuRessu/calculator-backend/actions/workflows/sast-scan.yml/badge.svg)
   ![Docker publish](https://github.com/HessuRessu/calculator-backend/actions/workflows/docker-publish.yml/badge.svg)
-
 
 ---
 
