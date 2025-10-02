@@ -6,7 +6,7 @@
 
 # Class: MetricsController
 
-Defined in: [src/controllers/MetricsController.ts:28](https://github.com/HessuRessu/calculator-backend/blob/9e0113add544d8bb9a8dd325db0bf2d995df2eea/src/controllers/MetricsController.ts#L28)
+Defined in: [src/controllers/MetricsController.ts:28](https://github.com/HessuRessu/calculator-backend/blob/e0992c3a3096d7e0eb2c13a5cb20d034b7065c2a/src/controllers/MetricsController.ts#L28)
 
 Prometheus metrics controller
 
@@ -74,7 +74,7 @@ Defined in: node\_modules/@tsoa/runtime/dist/interfaces/controller.d.ts:12
 
 > **getMetrics**(): `Promise`\<`string`\>
 
-Defined in: [src/controllers/MetricsController.ts:38](https://github.com/HessuRessu/calculator-backend/blob/9e0113add544d8bb9a8dd325db0bf2d995df2eea/src/controllers/MetricsController.ts#L38)
+Defined in: [src/controllers/MetricsController.ts:38](https://github.com/HessuRessu/calculator-backend/blob/e0992c3a3096d7e0eb2c13a5cb20d034b7065c2a/src/controllers/MetricsController.ts#L38)
 
 Returns metrics of the service
 

@@ -16,4 +16,5 @@
 - [middleware/requestMetrics](middleware/requestMetrics/README.md)
 - [routes/routes](routes/routes/README.md)
 - [server](server/README.md)
+- [types](types/README.md)
 - [utils/logger](utils/logger/README.md)

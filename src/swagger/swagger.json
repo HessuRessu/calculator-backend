@@ -6,7 +6,37 @@
 		"parameters": {},
 		"requestBodies": {},
 		"responses": {},
-		"schemas": {},
+		"schemas": {
+			"ICalculationResult": {
+				"properties": {
+					"result": {
+						"type": "number",
+						"format": "double"
+					},
+					"prime": {
+						"type": "boolean"
+					}
+				},
+				"required": [
+					"result",
+					"prime"
+				],
+				"type": "object",
+				"additionalProperties": true
+			},
+			"IMessage": {
+				"properties": {
+					"message": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object",
+				"additionalProperties": true
+			}
+		},
 		"securitySchemes": {}
 	},
 	"info": {
@@ -91,7 +121,7 @@
 				"operationId": "Sum",
 				"responses": {
 					"200": {
-						"description": ": number, \"isPrime\": boolean} JSON-object consisting of calculation results.",
+						"description": ": number, \"prime\": boolean} JSON-object indicating if input was prime.",
 						"content": {
 							"application/json": {
 								"schema": {
@@ -127,6 +157,23 @@
 								}
 							}
 						}
+					},
+					"400": {
+						"description": "bad request",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IMessage"
+								},
+								"examples": {
+									"Example 1": {
+										"value": {
+											"message": "Invalid numbers provided."
+										}
+									}
+								}
+							}
+						}
 					}
 				},
 				"description": "Controller method for calculating sum.",
@@ -136,7 +183,7 @@
 				"security": [],
 				"parameters": [
 					{
-						"description": "Comma separated list of numbers.",
+						"description": "Array of comma separated number that we will be calculating.",
 						"in": "query",
 						"name": "numbers",
 						"required": true,
@@ -152,18 +199,23 @@
 				"operationId": "IsPrime",
 				"responses": {
 					"200": {
-						"description": ": boolean} JSON-object indicating if input was prime.",
+						"description": ": number, \"prime\": boolean} JSON-object indicating if input was prime.",
 						"content": {
 							"application/json": {
 								"schema": {
 									"anyOf": [
 										{
 											"properties": {
-												"result": {
+												"prime": {
 													"type": "boolean"
+												},
+												"result": {
+													"type": "number",
+													"format": "double"
 												}
 											},
 											"required": [
+												"prime",
 												"result"
 											],
 											"type": "object"
@@ -183,6 +235,23 @@
 								}
 							}
 						}
+					},
+					"400": {
+						"description": "bad request",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IMessage"
+								},
+								"examples": {
+									"Example 1": {
+										"value": {
+											"message": "Invalid numbers provided."
+										}
+									}
+								}
+							}
+						}
 					}
 				},
 				"description": "Controller method for checking if number is prime.",
@@ -192,7 +261,7 @@
 				"security": [],
 				"parameters": [
 					{
-						"description": "Number that we will be checking",
+						"description": "Number that we will be checking.",
 						"in": "query",
 						"name": "number",
 						"required": true,

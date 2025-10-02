@@ -6,7 +6,7 @@
 
 # Class: ErrorHandler
 
-Defined in: [src/middleware/errorHandler.ts:4](https://github.com/HessuRessu/calculator-backend/blob/9e0113add544d8bb9a8dd325db0bf2d995df2eea/src/middleware/errorHandler.ts#L4)
+Defined in: [src/middleware/errorHandler.ts:4](https://github.com/HessuRessu/calculator-backend/blob/e0992c3a3096d7e0eb2c13a5cb20d034b7065c2a/src/middleware/errorHandler.ts#L4)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [src/middleware/errorHandler.ts:4](https://github.com/HessuRessu/cal
 
 > **new ErrorHandler**(`statusCode`, `message`): `ErrorHandler`
 
-Defined in: [src/middleware/errorHandler.ts:8](https://github.com/HessuRessu/calculator-backend/blob/9e0113add544d8bb9a8dd325db0bf2d995df2eea/src/middleware/errorHandler.ts#L8)
+Defined in: [src/middleware/errorHandler.ts:8](https://github.com/HessuRessu/calculator-backend/blob/e0992c3a3096d7e0eb2c13a5cb20d034b7065c2a/src/middleware/errorHandler.ts#L8)
 
 #### Parameters
 
@@ -56,7 +56,7 @@ Defined in: node\_modules/typescript/lib/lib.es2022.error.d.ts:26
 
 > **message**: `string`
 
-Defined in: [src/middleware/errorHandler.ts:6](https://github.com/HessuRessu/calculator-backend/blob/9e0113add544d8bb9a8dd325db0bf2d995df2eea/src/middleware/errorHandler.ts#L6)
+Defined in: [src/middleware/errorHandler.ts:6](https://github.com/HessuRessu/calculator-backend/blob/e0992c3a3096d7e0eb2c13a5cb20d034b7065c2a/src/middleware/errorHandler.ts#L6)
 
 #### Overrides
 
@@ -92,7 +92,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 > **statusCode**: `number`
 
-Defined in: [src/middleware/errorHandler.ts:5](https://github.com/HessuRessu/calculator-backend/blob/9e0113add544d8bb9a8dd325db0bf2d995df2eea/src/middleware/errorHandler.ts#L5)
+Defined in: [src/middleware/errorHandler.ts:5](https://github.com/HessuRessu/calculator-backend/blob/e0992c3a3096d7e0eb2c13a5cb20d034b7065c2a/src/middleware/errorHandler.ts#L5)
 
 ***
 

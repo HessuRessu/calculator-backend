@@ -6,7 +6,7 @@
 
 # Class: CalculatorController
 
-Defined in: [src/controllers/CalculatorController.ts:15](https://github.com/HessuRessu/calculator-backend/blob/9e0113add544d8bb9a8dd325db0bf2d995df2eea/src/controllers/CalculatorController.ts#L15)
+Defined in: [src/controllers/CalculatorController.ts:16](https://github.com/HessuRessu/calculator-backend/blob/e0992c3a3096d7e0eb2c13a5cb20d034b7065c2a/src/controllers/CalculatorController.ts#L16)
 
 Calculator controller
 
@@ -88,9 +88,9 @@ Defined in: node\_modules/@tsoa/runtime/dist/interfaces/controller.d.ts:8
 
 ### isPrime()
 
-> **isPrime**(`number`): `Promise`\<\{ `result`: `boolean`; \} \| \{ `message`: `string`; \}\>
+> **isPrime**(`number`): `Promise`\<\{ `prime`: `boolean`; `result`: `number`; \} \| \{ `message`: `string`; \}\>
 
-Defined in: [src/controllers/CalculatorController.ts:46](https://github.com/HessuRessu/calculator-backend/blob/9e0113add544d8bb9a8dd325db0bf2d995df2eea/src/controllers/CalculatorController.ts#L46)
+Defined in: [src/controllers/CalculatorController.ts:61](https://github.com/HessuRessu/calculator-backend/blob/e0992c3a3096d7e0eb2c13a5cb20d034b7065c2a/src/controllers/CalculatorController.ts#L61)
 
 Controller method for checking if number is prime.
 
@@ -100,11 +100,11 @@ Controller method for checking if number is prime.
 
 `number`
 
-Number that we will be checking
+Number that we will be checking.
 
 #### Returns
 
-`Promise`\<\{ `result`: `boolean`; \} \| \{ `message`: `string`; \}\>
+`Promise`\<\{ `prime`: `boolean`; `result`: `number`; \} \| \{ `message`: `string`; \}\>
 
 JSON-object indicating if input was prime.
 
@@ -194,7 +194,7 @@ Defined in: node\_modules/@tsoa/runtime/dist/interfaces/controller.d.ts:7
 
 > **sum**(`numbers`): `Promise`\<\{ `isPrime`: `boolean`; `result`: `number`; \} \| \{ `message`: `string`; \}\>
 
-Defined in: [src/controllers/CalculatorController.ts:24](https://github.com/HessuRessu/calculator-backend/blob/9e0113add544d8bb9a8dd325db0bf2d995df2eea/src/controllers/CalculatorController.ts#L24)
+Defined in: [src/controllers/CalculatorController.ts:32](https://github.com/HessuRessu/calculator-backend/blob/e0992c3a3096d7e0eb2c13a5cb20d034b7065c2a/src/controllers/CalculatorController.ts#L32)
 
 Controller method for calculating sum.
 
@@ -204,10 +204,10 @@ Controller method for calculating sum.
 
 `string`
 
-Comma separated list of numbers.
+Array of comma separated number that we will be calculating.
 
 #### Returns
 
 `Promise`\<\{ `isPrime`: `boolean`; `result`: `number`; \} \| \{ `message`: `string`; \}\>
 
-JSON-object consisting of calculation results.
+JSON-object indicating if input was prime.

@@ -8,7 +8,7 @@
 
 > **RegisterRoutes**(`app`): `void`
 
-Defined in: [src/routes/routes.ts:27](https://github.com/HessuRessu/calculator-backend/blob/9e0113add544d8bb9a8dd325db0bf2d995df2eea/src/routes/routes.ts#L27)
+Defined in: [src/routes/routes.ts:44](https://github.com/HessuRessu/calculator-backend/blob/e0992c3a3096d7e0eb2c13a5cb20d034b7065c2a/src/routes/routes.ts#L44)
 
 ## Parameters
 

@@ -4,8 +4,10 @@
 
 # Calculator Backend
 
-Simple calculator microservice demonstration.
+Simple calculator microservice demonstration.  
 Calculator can calculate simple equations and check if given number is prime.
+
+See ![Source documentation](https://github.com/HessuRessu/calculator-backend/blob/main/docs/modules.md).
 
 As said, this is a demonstration service, which requirements are following:
 * Application must be able to sum up 1-n numbers and indicate if sum is prime

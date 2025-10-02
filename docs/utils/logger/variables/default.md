@@ -8,4 +8,4 @@
 
 > `const` **default**: `Logger`\<`never`, `boolean`\>
 
-Defined in: [src/utils/logger.ts:3](https://github.com/HessuRessu/calculator-backend/blob/9e0113add544d8bb9a8dd325db0bf2d995df2eea/src/utils/logger.ts#L3)
+Defined in: [src/utils/logger.ts:3](https://github.com/HessuRessu/calculator-backend/blob/e0992c3a3096d7e0eb2c13a5cb20d034b7065c2a/src/utils/logger.ts#L3)

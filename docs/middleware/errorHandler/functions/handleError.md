@@ -8,7 +8,7 @@
 
 > **handleError**(`err`, `req`, `res`, `next`): `void`
 
-Defined in: [src/middleware/errorHandler.ts:15](https://github.com/HessuRessu/calculator-backend/blob/9e0113add544d8bb9a8dd325db0bf2d995df2eea/src/middleware/errorHandler.ts#L15)
+Defined in: [src/middleware/errorHandler.ts:15](https://github.com/HessuRessu/calculator-backend/blob/e0992c3a3096d7e0eb2c13a5cb20d034b7065c2a/src/middleware/errorHandler.ts#L15)
 
 ## Parameters
 

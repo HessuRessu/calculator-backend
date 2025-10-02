@@ -6,7 +6,7 @@
 
 # Class: HealthController
 
-Defined in: [src/controllers/HealthController.ts:12](https://github.com/HessuRessu/calculator-backend/blob/9e0113add544d8bb9a8dd325db0bf2d995df2eea/src/controllers/HealthController.ts#L12)
+Defined in: [src/controllers/HealthController.ts:12](https://github.com/HessuRessu/calculator-backend/blob/e0992c3a3096d7e0eb2c13a5cb20d034b7065c2a/src/controllers/HealthController.ts#L12)
 
 Health check controller
 
@@ -74,7 +74,7 @@ Defined in: node\_modules/@tsoa/runtime/dist/interfaces/controller.d.ts:12
 
 > **getHealth**(): `Promise`\<\{ `date`: `Date`; `status`: `string`; `version`: `string`; \}\>
 
-Defined in: [src/controllers/HealthController.ts:27](https://github.com/HessuRessu/calculator-backend/blob/9e0113add544d8bb9a8dd325db0bf2d995df2eea/src/controllers/HealthController.ts#L27)
+Defined in: [src/controllers/HealthController.ts:27](https://github.com/HessuRessu/calculator-backend/blob/e0992c3a3096d7e0eb2c13a5cb20d034b7065c2a/src/controllers/HealthController.ts#L27)
 
 Returns status of the service
 
