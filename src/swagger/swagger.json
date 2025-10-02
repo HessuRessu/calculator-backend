@@ -10,7 +10,7 @@
 		"securitySchemes": {}
 	},
 	"info": {
-		"title": "rest-boilerplate",
+		"title": "calculator-backend",
 		"version": "0.0.1",
 		"license": {
 			"name": "ISC"
@@ -136,7 +136,7 @@
 				"security": [],
 				"parameters": [
 					{
-						"description": "Comma separated list og numbers.",
+						"description": "Comma separated list of numbers.",
 						"in": "query",
 						"name": "numbers",
 						"required": true,
@@ -152,7 +152,7 @@
 				"operationId": "IsPrime",
 				"responses": {
 					"200": {
-						"description": "Ok",
+						"description": ": boolean} JSON-object indicating if input was prime.",
 						"content": {
 							"application/json": {
 								"schema": {
@@ -192,6 +192,7 @@
 				"security": [],
 				"parameters": [
 					{
+						"description": "Number that we will be checking",
 						"in": "query",
 						"name": "number",
 						"required": true,
@@ -206,7 +207,7 @@
 	},
 	"servers": [
 		{
-			"url": "/api/v0"
+			"url": "/api/v1"
 		}
 	]
 }
