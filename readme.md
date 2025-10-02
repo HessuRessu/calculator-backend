@@ -1,7 +1,7 @@
 # Calculator Backend
 
-Simple calculator microservice demonstration.  
-Calculator can calculate simple equations and check if given number is prime.
+Simple calculator microservice demonstration utilizing ![backend-boilerplate](https://github.com/HessuRessu/backend-boilerplate) template.  
+Service can calculate simple equations and check if given number is prime.
 
 See ![Source documentation](https://github.com/HessuRessu/calculator-backend/blob/main/docs/modules.md).
 
@@ -132,16 +132,16 @@ docker-compose up --build
 │   ├── controllers/      # TSOA controllers
 │   ├── middleware/       # Middleware handlers
 │   ├── routes/           # Generated routes
+│   ├── swagger/          # Generated swagger specs
 │   ├── utils/            # Utility modules
 │   ├── app.ts            # Express app initialization
 │   └── index.ts          # Entry point
 ├── scripts/              # Helper scripts (e.g., TSOA basePath)
-├── swagger/              # Generated swagger specs
-├── Dockerfile
-├── docker-compose.yml
+├── Dockerfile            # Docker build file
+├── docker-compose.yml    # Docker compose manifest
 ├── tsoa.json             # TSOA configuration
 ├── typedoc.json          # TypeDoc configuration
-├── tsconfig.json
+├── tsconfig.json         # TypeScript configuration
 └── README.md
 ```
 
