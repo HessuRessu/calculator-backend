@@ -41,7 +41,7 @@
 	},
 	"info": {
 		"title": "calculator-backend",
-		"version": "0.0.1",
+		"version": "0.0.2",
 		"license": {
 			"name": "ISC"
 		},
@@ -128,7 +128,7 @@
 									"anyOf": [
 										{
 											"properties": {
-												"isPrime": {
+												"prime": {
 													"type": "boolean"
 												},
 												"result": {
@@ -137,7 +137,7 @@
 												}
 											},
 											"required": [
-												"isPrime",
+												"prime",
 												"result"
 											],
 											"type": "object"
