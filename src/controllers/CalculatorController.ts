@@ -31,7 +31,7 @@ export class CalculatorController extends Controller {
     })
     public async sum(
         @Query() numbers: string
-    ): Promise<{ result: number, isPrime: boolean } | { message: string }> {
+    ): Promise<{ result: number, prime: boolean } | { message: string }> {
         const numberArray: number[] = String(numbers).split(",").map(Number);
         const sum = calculator.sum(numberArray);
         if (Number.isNaN(sum)) {
@@ -40,7 +40,7 @@ export class CalculatorController extends Controller {
         }
         else {
             this.setStatus(200);
-            return { result: sum, isPrime: calculator.isPrime(sum) };
+            return { result: sum, prime: calculator.isPrime(sum) };
         }
     }
 
